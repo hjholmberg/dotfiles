@@ -79,6 +79,20 @@ vim.api.nvim_create_user_command('GitBlameLine', function()
   print(vim.fn.system({ 'git', 'blame', '-L', line_number .. ',+1', filename }))
 end, { desc = 'Print the git blame for the current line' })
 
+-- Associate all .s with NASM
+vim.filetype.add({
+  extension = {
+    s = "nasm",
+    S = "nasm",
+  },
+})
+
+-- Tab configuration
+vim.o.tabstop = 8
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+vim.o.softtabstop = -1
+
 -- [[ Add optional packages ]]
 -- Nvim comes bundled with a set of packages that are not enabled by
 -- default. You can enable any of them by using the `:packadd` command.
