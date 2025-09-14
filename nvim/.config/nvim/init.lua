@@ -92,3 +92,6 @@ require("config.lazy")
 
 -- Sexy colors!
 vim.cmd("colorscheme carbonfox")
+
+-- Status line
+require('config.lualine')
