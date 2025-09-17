@@ -24,8 +24,30 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    -- import your plugins
-    { import = "plugins" }
+    { "EdenEast/nightfox.nvim" },
+    {
+      "nvim-lualine/lualine.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+      "nvim-treesitter/nvim-treesitter",
+      branch = 'master', lazy = false, build = ":TSUpdate",
+    },
+    { "numToStr/FTerm.nvim" },
+    {
+      "nvim-telescope/telescope.nvim", branch = "0.1.x",
+      dependencies = { 'nvim-lua/plenary.nvim' },
+    },
+    {
+      "nvim-neo-tree/neo-tree.nvim",
+      branch = "v3.x",
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+        "MunifTanjim/nui.nvim",
+        "nvim-tree/nvim-web-devicons", -- optional, but recommended
+      },
+      lazy = false, -- neo-tree will lazily load itself
+    },
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

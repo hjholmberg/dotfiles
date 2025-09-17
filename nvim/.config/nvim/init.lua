@@ -101,11 +101,5 @@ vim.o.softtabstop = -1
 -- 'updatetime' and when going to insert mode
 vim.cmd('packadd! nohlsearch')
 
--- Lazy package manager
-require("config.lazy")
-
--- Sexy colors!
-vim.cmd("colorscheme carbonfox")
-
--- Status line
-require('config.lualine')
+-- Plugin setup
+require("plugins")
