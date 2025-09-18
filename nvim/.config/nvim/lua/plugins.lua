@@ -9,3 +9,5 @@ require('config.lualine')
 require('config.treesitter')
 
 require('config.FTerm')
+
+require('config.telescope')
