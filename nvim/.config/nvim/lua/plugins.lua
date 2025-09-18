@@ -11,3 +11,5 @@ require('config.treesitter')
 require('config.FTerm')
 
 require('config.telescope')
+
+require('config.lsp')
