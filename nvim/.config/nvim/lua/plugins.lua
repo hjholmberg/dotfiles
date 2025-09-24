@@ -13,3 +13,5 @@ require('config.FTerm')
 require('config.telescope')
 
 require('config.lsp')
+
+require('config.neotree')
