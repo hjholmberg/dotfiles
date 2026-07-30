@@ -30,8 +30,7 @@ require("lazy").setup({
       dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     {
-      "nvim-treesitter/nvim-treesitter",
-      branch = 'master', lazy = false, build = ":TSUpdate",
+      "nvim-treesitter/nvim-treesitter", lazy = false, build = ":TSUpdate",
     },
     { "numToStr/FTerm.nvim" },
     {
