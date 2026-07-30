@@ -2,9 +2,12 @@ vim.lsp.config('pylsp', {
   settings = {
     pylsp = {
       plugins = {
-        pycodestyle = {
-          maxLineLength = 100
-        }
+        ruff = {
+          enabled = true,
+          -- Below ignored if pyproject.toml present
+          lineLength = 100,
+          select = { "W", "E", "F" }
+        },
       }
     }
   }
